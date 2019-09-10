@@ -29,6 +29,6 @@ def start_message(message):
 def send_text(message):
     if message.text != "":
         bot.send_message(message.chat.id, 'Привет, мой создатель')
-    elif message.text != "":
+    elif '' in message.text:
         bot.send_message(message.chat.id, 'Прощай, создатель')
 bot.polling()
