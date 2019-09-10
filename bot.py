@@ -27,7 +27,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    if '' in message.text:
+    if ' ' in message.text:
         bot.send_message(message.chat.id, 'нахуй иди')
     elif message.text != "":
         bot.send_message(message.chat.id, 'иди нахуй')
