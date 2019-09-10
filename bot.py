@@ -16,7 +16,7 @@ r = redis.from_url(os.environ.get("REDIS_URL"))
 
 #       Your bot code below
 bot = telebot.TeleBot(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
- #some_api = some_api_lib.connect(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
+#some_api = some_api_lib.connect(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
 #              ...
 @bot.message_handler(commands=['start'])
 def start_message(message):
