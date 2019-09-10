@@ -15,14 +15,11 @@ some_api_token = os.environ['SOME_API_TOKEN']
 r = redis.from_url(os.environ.get("REDIS_URL"))
 
 #       Your bot code below
- bot = telebot.TeleBot(token)
- some_api = some_api_lib.connect(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
+ bot = telebot.TeleBot(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
+ #some_api = some_api_lib.connect(968928190:AAE8iCHSU63HAcommSlsoVg_5J0OP2gNfw8)
 #              ...
-def help_message(arguments, message):
-    response = {'chat_id': message['chat']['id']}
-    result = ["Hey, %s!" % message["from"].get("first_name"),
-              "\rI can accept only these commands:"]
-    for command in CMD:
-        result.append(command)
-    response['text'] = "\n\t".join(result)
-    return response
+@bot.message_handler(commands=['start'])
+def start_message(message):
+    bot.send_message(message.chat.id, 'Привет, ты написал мне /start')
+
+bot.polling()
