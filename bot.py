@@ -31,5 +31,5 @@ def send_text(message):
         bot.reply_to(message, "Здравствуй, {0.first_name}".format(message.from_user))
        # bot.send_message(message.chat.id, 'Viva 2JC')
     elif message.text != "":
-        bot.send_message(message.chat.id, 'Привіт {0.first_name}'.format(message.from_user))
+        bot.send_message(message.chat.id, 'Привіт, {0.first_name}'.format(message.from_user))
 bot.polling()
