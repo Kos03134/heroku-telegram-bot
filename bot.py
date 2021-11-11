@@ -30,5 +30,5 @@ def send_text(message):
     if ' ' in message.text:
         bot.send_message(message.chat.id, 'Viva 2JC')
     elif message.text != "":
-        bot.send_message(message.chat.id, 'Привіт')
+        bot.send_message(message.chat.id, 'Привіт {0.first_name}\n')
 bot.polling()
